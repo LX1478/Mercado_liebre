@@ -1,0 +1,321 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    background-color: #EAC926;
+}
+
+.nav-header {
+    margin: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+/* Logo */
+.logo {
+    width: 50%;
+}
+/* grupo para el search y su icono */
+.input-group {
+    width: 50%;
+    position: relative;
+}
+/* input search */
+.search {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Icono del search */
+.fa-magnifying-glass {
+    background-color: white;
+    padding: 5px;
+    color: #666;
+    border: none;
+
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.comprar-cuotas {
+    margin-left: 30%;
+}
+
+.comprar-cuotas p {
+    display: inline;
+}
+/* Ocultando las listas en la vista mobile */
+header ul {
+    display: none;
+}
+
+p {
+    font-size: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+/* Icono del menu */
+.burguer-menu i {
+    margin-left: 45%;
+    padding: 10px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 10%;
+    margin-bottom: 15px;
+}
+
+
+main {
+    background-color: #ebebeb;
+    padding-bottom: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main section {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.tiulares {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #666;
+}
+
+main section article {
+    background-color: white;
+    margin: 10px 0px;
+
+    transition: box-shadow 0.5s;
+}
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.precio {
+    width: 30%;
+    font-size: 18px;
+    display: inline;
+}
+
+.descuento {
+    width: 70%;
+    font-size: 16px;
+    color: #39b54a;
+    display: inline;
+}
+
+.descripciones {
+    opacity: 0%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+
+    transition: opacity 0.5s;
+}
+.descripciones:hover {
+    opacity: 100%;
+}
+/* Icono del camion */
+main section article i{
+    color: #39b54a;
+    
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px; 
+    
+}
+
+main section article i:hover{
+    animation: camion 3s 1;
+}
+
+@keyframes camion {
+    100% {
+        rotate: -90deg;
+    }
+}
+
+.caja {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid #ebebeb 1px;
+    padding: 15px;
+    position: relative;
+}
+
+
+main section article img {
+    display: block;
+    width: 80%;
+    height: 40%;
+}
+
+
+footer {
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer__icono {
+    font-size: 2em;
+    color: #1259c3;
+    content: 150px; 
+
+    transition: color 0.5s;
+}
+
+.footer__icono:hover {
+    color:#EAC926;
+}
+
+.footer-descripcion {
+    width: 28%;
+    margin-bottom: 20px;
+} 
+
+.footer-descripcion h4 {
+    color: #666;
+}
+
+.copyright {
+    justify-self: start;
+    width: 100%;
+}
+
+.copyright h4{
+    width: 100%;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.btn-enviar:hover {
+    background-color: #0022AA;
+    color: white;
+}
+
+@media (min-width: 361px){
+    /* main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    } */
+
+    header ul {
+        display: block;
+    }
+
+    .burguer-menu i {
+        display: none;
+    }
+
+    /* estilado de la navegacion del header */
+    .nav-header {
+        justify-content: space-around;
+    }
+    .logo {
+        width: 30%;
+    }
+    .input-group {
+        width: 30%;
+    }
+    .comprar-cuotas {
+        margin: 0%;
+    }
+
+    main section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    } 
+    
+    main section article {
+        width: 45%;
+    }
+
+    .tiulares {
+        width: 100%;
+    }
+
+    .precio {
+        width: 60%;
+        font-size: 16px;
+    }
+    .descuento {
+        width: 40%;
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 769px){
+    main section article {
+        width: 20%;
+    }
+
+    .precio {
+        width: 30%;
+        font-size: 18px;
+    }
+    .descuento {
+        width: 70%;
+        font-size: 16px;        
+    }
+}
+
+
+/*
+COLORES
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+
+/* p {
+    transition-property: all;
+    transition-duration: 21s;
+
+
+
+} */
