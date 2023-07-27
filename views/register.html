@@ -57,36 +57,62 @@
 
     <main>
         <form action="/procesarregistro" method="post">
-            <label for="">Nombre</label>
-            <input type="text" placeholder="Ingrese su nombre">
+            <h3>Nombre y apellido</h3>
+            <input type="text" placeholder="Ingrese su nombre y apellido">
 
-            <label for="">Apellido</label>
-            <input type="text" placeholder="Ingrese su apellido">
+            <h3>Nombre usuario</h3>
+            <input type="text" placeholder="Ingrese su nombre de usuario">
 
-            <label for="">Fecha de nacimiento</label>
+            <h3>Email</h3>
+            <input type="text" name="" id="email" placeholder="Ingrese su email">
+
+            <h3>Fecha de nacimiento</h3>
             <input type="date" name="" id="">
 
-            <label for="">Domicilio</label>
+            <h3>Domicilio</h3>
             <input type="text" placeholder="Ingrese su domicilio">
             
             <h3>Quieres comprar o vender?</h3>
-            <input type="radio" name="comprar-vender" id="">
-            <input type="radio" name="comprar-vender" id="">
+            <div class="comprar-vender">
+                <input type="radio" name="comprarVender" id="comprar">
+                <label for="comprar">Comprador</label>
+                <input type="radio" name="comprarVender" id="vender">
+                <label for="vender">Vendedor</label>
+            </div>
+            
+            <h3>Categorías de interés (puede elegir más de una)</h3>
+            <div class="intereses">
+                <div>
+                    <input type="checkbox" name="" id="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="" id="moda">
+                    <label for="moda">Moda</label>
+                </div>
 
-            <label for="">Categorías de interés (puede elegir más de una)</label>
-            <label for="electro">Electro</label>
-            <input type="checkbox" name="" id="">
-            <label for="moda">Moda</label>
-            <label for="jugueteria">Jugueteria</label>
-            <input type="checkbox" name="" id="">
-            <label for="vida-sana">Vida Sana</label>
-            <input type="checkbox" name="" id="">
+                <div>
+                    <input type="checkbox" name="" id="hogar">
+                    <label for="hogar">Hogar</label>   
+                </div>
 
+                <div>
+                    <input type="checkbox" name="" id="jugueteria">
+                    <label for="jugueteria">Jugueteria</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="vida-sana">
+                    <label for="vida-sana">Vida Sana</label>
+                </div>
+            </div>
+            
             <input type="file" name="" id="">
 
-            <label for="">Constraseña</label>
+            <h3>Contraseña</h3>
             <input type="password" name="" id="" placeholder="Ingrese su contraseña">
-            <label for="">Confirmar contraseña</label>
+            <h3>Confirmar contraseña</h3>
             <input type="password" name="" id="" placeholder="Reingrese su contraseña">
             
             <br>
