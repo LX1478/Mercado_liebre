@@ -7,12 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Registrarse</title>
 </head>
 <body>
     <header>
         <div class="nav-header">
-            <a href="/" class="logo">
+            <a href="/" class="logo" accesskey="z">
                 <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre">
             </a>
             <div class="input-group">
@@ -35,12 +35,12 @@
         <br>
         <ul class="login-navbar">
             <li>
-                <a href="/register">Creá tu cuenta</a> 
+                <a href="/register" accesskey="x">Creá tu cuenta</a> 
                 <i class="fa-regular fa-address-card"></i>
             </li>
             
             <li>
-                <a href="/login">Ingresá</a>
+                <a href="/login" accesskey="c">Ingresá</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </li>
             <li>
@@ -56,69 +56,73 @@
     </header>
 
     <main>
+        <h1>!Registrese!</h1>
+
         <form action="/procesarregistro" method="post">
             <h3>Nombre y apellido</h3>
-            <input type="text" placeholder="Ingrese su nombre y apellido">
+            <input type="text" name="name_surname" placeholder="Ingrese su nombre y apellido">
 
             <h3>Nombre usuario</h3>
-            <input type="text" placeholder="Ingrese su nombre de usuario">
+            <input type="text" name="username" placeholder="Ingrese su nombre de usuario">
 
             <h3>Email</h3>
-            <input type="text" name="" id="email" placeholder="Ingrese su email">
+            <input type="email" name="email" id="email" placeholder="Ingrese su email">
 
             <h3>Fecha de nacimiento</h3>
-            <input type="date" name="" id="">
+            <input type="date" name="date_of_birth" id="">
 
             <h3>Domicilio</h3>
-            <input type="text" placeholder="Ingrese su domicilio">
+            <input type="text" name="address" nplaceholder="Ingrese su domicilio">
             
             <h3>Quieres comprar o vender?</h3>
             <div class="comprar-vender">
-                <input type="radio" name="comprarVender" id="comprar">
+                <input type="radio" name="buy_sell" id="comprar" value="buy">
                 <label for="comprar">Comprador</label>
-                <input type="radio" name="comprarVender" id="vender">
+                <input type="radio" name="buy_sell" id="vender" value="sell">
                 <label for="vender">Vendedor</label>
             </div>
             
             <h3>Categorías de interés (puede elegir más de una)</h3>
             <div class="intereses">
                 <div>
-                    <input type="checkbox" name="" id="electro">
+                    <input type="checkbox" name="interests" id="electro" value="electro">
                     <label for="electro">Electro</label>
                 </div>
                 
                 <div>
-                    <input type="checkbox" name="" id="moda">
+                    <input type="checkbox" name="interests" id="moda" value="fashion">
                     <label for="moda">Moda</label>
                 </div>
 
                 <div>
-                    <input type="checkbox" name="" id="hogar">
+                    <input type="checkbox" name="interests" id="hogar" value="home">
                     <label for="hogar">Hogar</label>   
                 </div>
 
                 <div>
-                    <input type="checkbox" name="" id="jugueteria">
+                    <input type="checkbox" name="interests" id="jugueteria" value="toy_shop">
                     <label for="jugueteria">Jugueteria</label>
                 </div>
 
                 <div>
-                    <input type="checkbox" name="" id="vida-sana">
+                    <input type="checkbox" name="interests" id="vida-sana" value="healthy_life">
                     <label for="vida-sana">Vida Sana</label>
                 </div>
             </div>
             
-            <input type="file" name="" id="">
+            <input type="file" name="file" id="">
 
             <h3>Contraseña</h3>
-            <input type="password" name="" id="" placeholder="Ingrese su contraseña">
+            <input type="password" name="password" id="" placeholder="Ingrese su contraseña">
             <h3>Confirmar contraseña</h3>
-            <input type="password" name="" id="" placeholder="Reingrese su contraseña">
+            <input type="password" name="confirm_password" id="" placeholder="Reingrese su contraseña">
             
             <br>
-            <button type="submit">Enviar</button>
+            <div class="btns">
+                <button type="submit" class="btn-enviar" accesskey="b">Enviar</button>
+                <button type="reset" class="btn-borrar">Borrar</button>
+            </div>
 
-            <button type="reset">Borrar</button>
         </form>
     </main>
 

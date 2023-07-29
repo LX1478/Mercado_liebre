@@ -7,12 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <header>
         <div class="nav-header">
-            <a href="/" class="logo">
+            <a href="/" class="logo" accesskey="z">
                 <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre">
             </a>
             <div class="input-group">
@@ -35,12 +35,12 @@
         <br>
         <ul class="login-navbar">
             <li>
-                <a href="/register">Creá tu cuenta</a> 
+                <a href="/register" accesskey="x">Creá tu cuenta</a> 
                 <i class="fa-regular fa-address-card"></i>
             </li>
             
             <li>
-                <a href="/login">Ingresá</a>
+                <a href="/login" accesskey="c">Ingresá</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </li>
             <li>
@@ -56,13 +56,18 @@
     </header>
 
     <main>
-        <form action="/login" method="post">
+        <h1>!Inicie sesión!</h1>
+
+        <form action="/procesarlogin" method="post">
             <h3>Nombre de usuario</h3>
-            <input type="text" name="" id="" placeholder="Ingrese su nombre de usuario">
+            <input type="text" name="username" id="" placeholder="Ingrese su nombre de usuario" accesskey="n">
 
             <h3>Contraseña</h3>
-            <input type="text" name="" id="" placeholder="Ingrese su contraseña">
-            <button type="submit" class="btn-enviar">Enviar</button>
+            <input type="password" name="password" id="" placeholder="Ingrese su contraseña" accesskey="m">
+
+            <div class="btns">
+                <button type="submit" class="btn-enviar" accesskey="b">Enviar</button>
+            </div>
         </form>
     </main>
 

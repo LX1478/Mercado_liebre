@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use(express.urlencoded( {extended : false}));
+app.use(express.urlencoded( { extended: false}));
 
 app.listen(PORT, () => {
     console.log('Servidor corriendo en el puerto:  ' + PORT);
@@ -23,6 +23,7 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'login.html'))
 });
 
+/* Post del registro */
 app.post('/procesarregistro', (req, res) => {
     /* Procesar los datos que llegan del formulario */
     console.log(req.body);
@@ -30,8 +31,10 @@ app.post('/procesarregistro', (req, res) => {
     res.redirect("/");
 });
 
+/* Post del login */
 app.post('/procesarlogin', (req, res) => {
     console.log(req.body);
+
     res.redirect("/");
 })
 
