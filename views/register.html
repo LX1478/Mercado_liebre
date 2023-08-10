@@ -26,28 +26,30 @@
             </div>
         </div>          
 
-        <ul class="site">
-            <li><a href="">Ofertas</a></li>
-            <li><a href="">Tiendas Oficiales</a></li>
-            <li><a href="">Vender</a></li>
-            <li><a href="">Ayuda</a></li>
-        </ul>
-        <br>
-        <ul class="login-navbar">
-            <li>
-                <a href="/register" accesskey="x">Creá tu cuenta</a> 
-                <i class="fa-regular fa-address-card"></i>
-            </li>
-            
-            <li>
-                <a href="/login" accesskey="c">Ingresá</a>
-                <i class="fa-solid fa-right-to-bracket"></i>
-            </li>
-            <li>
-                <a href="">Mis compras</a>
-                <i class="fa-solid fa-basket-shopping"></i>
-            </li>
-        </ul>
+        <div class="nav-header2">
+            <ul class="nav-header2__caja">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas Oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <br>
+            <ul class="nav-header2__caja">
+                <li>
+                    <a href="/register" accesskey="x">Creá tu cuenta</a> 
+                    <i class="fa-regular fa-address-card"></i>
+                </li>
+                
+                <li>
+                    <a href="/login" accesskey="c">Ingresá</a>
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </li>
+                <li>
+                    <a href="">Mis compras</a>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </li>
+            </ul>
+        </div>
 
         <br>
         <div class="burguer-menu">
@@ -60,25 +62,25 @@
 
         <form action="/procesarregistro" method="post">
             <h3>Nombre y apellido</h3>
-            <input type="text" name="name_surname" placeholder="Ingrese su nombre y apellido">
+            <input type="text" name="name_surname" placeholder="Ingrese su nombre y apellido" required>
 
             <h3>Nombre usuario</h3>
-            <input type="text" name="username" placeholder="Ingrese su nombre de usuario">
+            <input type="text" name="username" placeholder="Ingrese su nombre de usuario" required>
 
             <h3>Email</h3>
-            <input type="email" name="email" id="email" placeholder="Ingrese su email">
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
 
             <h3>Fecha de nacimiento</h3>
-            <input type="date" name="date_of_birth" id="">
+            <input type="date" name="date_of_birth" id="" required>
 
             <h3>Domicilio</h3>
-            <input type="text" name="address" nplaceholder="Ingrese su domicilio">
+            <input type="text" name="address" nplaceholder="Ingrese su domicilio" required>
             
             <h3>Quieres comprar o vender?</h3>
             <div class="comprar-vender">
-                <input type="radio" name="buy_sell" id="comprar" value="buy">
+                <input type="radio" name="buy_sell" id="comprar" value="buy" required>
                 <label for="comprar">Comprador</label>
-                <input type="radio" name="buy_sell" id="vender" value="sell">
+                <input type="radio" name="buy_sell" id="vender" value="sell" required>
                 <label for="vender">Vendedor</label>
             </div>
             
@@ -113,9 +115,9 @@
             <input type="file" name="file" id="">
 
             <h3>Contraseña</h3>
-            <input type="password" name="password" id="" placeholder="Ingrese su contraseña">
+            <input type="password" name="password" id="" placeholder="Ingrese su contraseña" required>
             <h3>Confirmar contraseña</h3>
-            <input type="password" name="confirm_password" id="" placeholder="Reingrese su contraseña">
+            <input type="password" name="confirm_password" id="" placeholder="Reingrese su contraseña" required>
             
             <br>
             <div class="btns">
